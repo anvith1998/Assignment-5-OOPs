@@ -4,17 +4,30 @@
 
 Challenge 2: Implement a Calculator Class
 
-num1 =int(input('Enter the value 1 :'))
-num2 = int(input('Enter the value 2 :'))
+class calculator:
+    def __init__(self):
+        self.num1 = eval(input('Enter the value 1 :'))
+        self.num2 = eval(input('Enter the value 2 :'))   
+    def sum(self):
+        print(self.num1 + self.num2)
+    def min(self):
+        print(self.num1 - self.num2)
+    def multi(self):
+        print(self.num1 * self.num2)
+    def div(self):
+        print(self.num1 / self.num2)
+                               
 opr= input('Enter the opr..')
+obj = calculator()
 
 if opr == '+':
-    print(num1+num2)
+    obj.sum()
 elif opr == '-':
-    print(num1-num2)
+    obj.min()
 elif opr == '*':
-    print(num1*num2)
+    obj.multi()
 elif opr == '/':
-    print(num1/num2)
+    obj.div()
 else:
-    print('invalid operation')
+    print('invalid operation')                               
+
